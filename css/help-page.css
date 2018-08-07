@@ -1,0 +1,409 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Merriweather', serif;
+}
+
+@media screen and (min-width: 911px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 910px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+.clearfix:after {
+  /* use on parent container of floated items */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*nav bar styles*/
+
+#legacy-navbar {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-family: 'Merriweather', serif;
+}
+
+#legacy-navbar .legacy-navbar-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#legacy-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#legacy-navbar ul li {
+  float: left;
+}
+
+#legacy-navbar .legacy-navbar-links {
+  width: 70%;
+  padding: 17px 0px;
+  float: right;
+}
+
+#legacy-navbar .social-media {
+  float: right;
+}
+
+#legacy-navbar .legacy-navbar-logo,
+#legacy-navbar .legacy-sections {
+  float: left;
+}
+
+#legacy-navbar .legacy-navbar-logo {
+  height: 100%;
+  width: 30%;
+}
+
+#legacy-navbar .legacy-navbar-logo a {
+  width: 80%;
+  height: 100%;
+  display: block;
+  text-align: center;
+  background-image: url(../assets/LGlogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+#legacy-navbar .legacy-mobile-on-button {
+  width: 20%;
+  height: 100%;
+  float: right;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+
+#legacy-navbar .legacy-mobile-on-button svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+#legacy-navbar .legacy-mobile-off-button {
+  width: 20%;
+  height: 75px;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+#legacy-navbar .legacy-mobile-off-button svg {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+
+#legacy-navbar .legacy-sections a {
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  color: #144B9E;
+}
+
+#legacy-navbar .legacy-sections .mail-icon a {
+  width: 50px;
+  display: block;
+  height: 18px;
+  position: relative;
+}
+
+#legacy-navbar .legacy-sections .mail-icon svg {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  fill: #144B9E;
+  transition: all 1s;
+}
+
+#legacy-navbar .social-media a {
+  padding: 0px 7px;
+}
+
+#legacy-navbar .social-media ul {
+  float: right;
+}
+
+#legacy-navbar .social-media svg {
+  height: 20px;
+  fill: #fff;
+  transition: 1s;
+}
+
+#legacy-navbar a {
+  font-weight: 100;
+}
+
+
+/* if screen is larger than 1200px */
+
+@media screen and (min-width: 1200px) {
+  #legacy-navbar .legacy-navbar-container {
+    width: 85%;
+  }
+}
+
+
+/* if screen is smaller than 910px */
+
+@media screen and (max-width: 950px) {
+  body.stopScrolling {
+    overflow: hidden;
+  }
+  #legacy-navbar .legacy-navbar-links {
+    width: 100vw;
+    height: 100vh;
+    padding: 8% 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    float: none;
+    background: rgba(0, 0, 0, 0.95);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  #legacy-navbar .legacy-navbar-links.active {
+    right: 0;
+  }
+  #legacy-navbar .legacy-mobile-on-button {
+    display: block;
+  }
+  #legacy-navbar .legacy-mobile-on-button svg {
+    fill: #000;
+  }
+  #legacy-navbar .legacy-mobile-off-button {
+    display: block;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections {
+    width: 100%;
+    float: none;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li:hover {
+    background-color: #000;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li a {
+    display: inline-block;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 35px 0;
+  }
+  #legacy-navbar .legacy-navbar-links .legacy-sections li a:hover {
+    color: #fff;
+  }
+  #legacy-navbar .legacy-sections .mail-icon svg {
+    height: 50px;
+    fill: #fff;
+  }
+  #legacy-navbar .legacy-navbar-links .social-media {
+    width: 275px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #legacy-navbar .legacy-navbar-links .social-media svg {
+    height: 40px;
+  }
+}
+
+
+/* if screen is smaller than 750px */
+
+@media screen and (max-width: 750px) {
+  #legacy-navbar .legacy-navbar-logo a {
+    background-image: url(../assets/mainlogo.png);
+  }
+}
+
+
+/*
+* ----------------
+*     Help Page
+* ----------------
+*/
+
+#help-page {
+  width: 100%;
+  background-image: url("./../assets/Background-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container h1 {
+  color: #1775BF;
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.container h4 {
+  color: #1775BF;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+.help-content {
+  background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.topic-contents p,
+.topic-contents p a {
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.topic-contents a:hover {
+  color: #1775BF;
+}
+
+.clear {
+  text-align: right;
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.clear a {
+  text-decoration: none;
+  color: #007DA6;
+  font-weight: 550;
+}
+
+.content-info {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .help-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .topic-contents a {
+    text-decoration: none;
+    color: black;
+  }
+  .topic-contents a:hover {
+    color: #1775BF;
+  }
+  .clear {
+    text-align: right;
+    padding-right: 10px;
+    text-decoration: none;
+  }
+  .content-info {
+    padding-top: 25px;
+  }
+}
+
+
+/*
+* --------------------
+*     Footer Section
+* --------------------
+*/
+
+footer {
+  width: 100%;
+  background-color: #262932;
+  bottom: 0;
+  left: 0;
+  color: #E1E1E1;
+  text-align: center;
+  margin-top: 30px;
+  z-index: 0;
+}
+
+footer p {
+  padding: 1em 4em;
+}
+
+
+/* target offset */
+
+a[name] {
+  position: relative;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+a[name]:before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: 0;
+  right: 0;
+}
